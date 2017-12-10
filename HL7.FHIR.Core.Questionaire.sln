@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HL7.FHIR.Core.Questionaire", "HL7.FHIR.Core.Questionaire\HL7.FHIR.Core.Questionaire.csproj", "{B0E0BA64-45FC-4E60-B015-8F768AE85255}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HL7.FHIR.Core.Questionnaire", "HL7.FHIR.Core.Questionaire\HL7.FHIR.Core.Questionnaire.csproj", "{B0E0BA64-45FC-4E60-B015-8F768AE85255}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7.FHIR.Code.QuestionnaireResponse", "HL7.FHIR.Code.QuestionnaireResponse\HL7.FHIR.Code.QuestionnaireResponse.csproj", "{E21F947A-EC2E-4BBB-A28D-0BB17F424E6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HL7.FHIR.Code.QuestionnaireResponse", "HL7.FHIR.Code.QuestionnaireResponse\HL7.FHIR.Code.QuestionnaireResponse.csproj", "{E21F947A-EC2E-4BBB-A28D-0BB17F424E6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

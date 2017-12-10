@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Rest;
 
-namespace HL7.FHIR.Core.Questionaire
+namespace HL7.FHIR.Core.Questionnaire
 {
     static class Program
     {
         static void Main()
         {
 
-            var qDødsmelding = new Questionnaire
+            var qDødsmelding = new Hl7.Fhir.Model.Questionnaire
             {
                 Id = "7",
                 Title = "Dødsmelding",
@@ -48,32 +48,32 @@ namespace HL7.FHIR.Core.Questionaire
                 {
                     ResourceType.Person
                 },
-                Item = new List<Questionnaire.ItemComponent>()
+                Item = new List<Hl7.Fhir.Model.Questionnaire.ItemComponent>()
                 {
-                    new Questionnaire.ItemComponent()
+                    new Hl7.Fhir.Model.Questionnaire.ItemComponent()
                     {
                         LinkId = "deceasedPerson",
                         Text = "Personidentifikator til den avdøde",
                         Required = true,
                         Repeats = false,
-                        Type = Questionnaire.QuestionnaireItemType.Text,
+                        Type = Hl7.Fhir.Model.Questionnaire.QuestionnaireItemType.Text,
                         FhirComments = new List<string>() {"PersonPicker"},
                         
                     },
-                    new Questionnaire.ItemComponent()
+                    new Hl7.Fhir.Model.Questionnaire.ItemComponent()
                     {
                         LinkId = "timeOfDeath",
                         Text = "Dødstidspunkt (dd.mm.åååå)",
                         Required = true,
                         Repeats = false,
-                        Type = Questionnaire.QuestionnaireItemType.DateTime
+                        Type = Hl7.Fhir.Model.Questionnaire.QuestionnaireItemType.DateTime
                     },
-                    new Questionnaire.ItemComponent()
+                    new Hl7.Fhir.Model.Questionnaire.ItemComponent()
                     {
                         LinkId = "confirmation",
-                        EnableWhen = new List<Questionnaire.EnableWhenComponent>()
+                        EnableWhen = new List<Hl7.Fhir.Model.Questionnaire.EnableWhenComponent>()
                         {
-                            new Questionnaire.EnableWhenComponent()
+                            new Hl7.Fhir.Model.Questionnaire.EnableWhenComponent()
                             {
                                 Question = "timeOfDeath",
                                 HasAnswer = true
@@ -82,7 +82,7 @@ namespace HL7.FHIR.Core.Questionaire
                         Text = "Bekreftelse",
                         Required = true,
                         Repeats = false,
-                        Type = Questionnaire.QuestionnaireItemType.Boolean
+                        Type = Hl7.Fhir.Model.Questionnaire.QuestionnaireItemType.Boolean
                     }
                 }
             };

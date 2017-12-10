@@ -3,6 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>HL7.FHIR.Core.Questionnaire</AssemblyName>
+    <RootNamespace>HL7.FHIR.Core.Questionnaire</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
