@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Rest;
 
@@ -35,13 +36,13 @@ namespace HL7.FHIR.Code.QuestionnaireResponse
                 {
                     Url = new Uri("http://nde-fhir-ehelse.azurewebsites.net/fhir/Questionnaire/7")
                 },
-                Authored = DateTime.Now.ToShortDateString(),
+                Authored = DateTime.Now.ToString(CultureInfo.InvariantCulture),
                 Status = Hl7.Fhir.Model.QuestionnaireResponse.QuestionnaireResponseStatus.Completed,
                 Subject = new ResourceReference()
                 {
                     Reference = $"https://grunndata.ehelse.no/fhir/Person/{gPerson}"  
                 },
-                Source = new ResourceReference
+                Author = new ResourceReference
                 {
                     Reference = $"https://grunndata.ehelse.no/fhir/Practitioner/{gHelseperson}"
                 },
@@ -66,7 +67,7 @@ namespace HL7.FHIR.Code.QuestionnaireResponse
                         {
                             new Hl7.Fhir.Model.QuestionnaireResponse.AnswerComponent
                             {
-                                Value = new FhirString(DateTime.Today.AddDays(-1).ToShortDateString())
+                                Value = new FhirDateTime(DateTime.Today.AddDays(-1))
                             }
                         } 
                         
